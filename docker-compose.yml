@@ -1,0 +1,59 @@
+version: '3.3'
+
+services:
+  web:
+    image: nginx:latest
+    container_name: web
+    restart: "on-failure"
+    ports:
+      - 80:80
+    #depends_on:
+    #  - nginx9
+    volumes:
+      - ./web/nginx.conf:/etc/nginx/nginx.conf
+  client:
+    build:
+      context: ./client
+    container_name: client
+    restart: "on-failure"
+    expose:
+      - 3000
+    volumes:
+      - './client:/app'
+      - '/app/node_modules'
+    environment: 
+      - NODE_ENV=development 
+      - CHOKIDAR_USEPOLLING=true
+
+
+# #스빔 대전점
+#   nginx9:
+#     extends:
+#       file: common-was.yml
+#       service: webapp
+#     restart: "on-failure"
+#     depends_on:
+#       - php-fpm9
+#     volumes:
+#       - ./code/9:/app/9
+#       - /var/log/nginx:/var/log/nginx
+#     restart: "no"
+
+#   php-fpm9:
+#     extends:
+#       file: common-fpm.yml
+#       service: fpm
+#     restart: "on-failure" 
+
+# #스빔 대전점
+#   mqtt:
+#     image: eclipse-mosquitto:1.4.12
+#     ports:
+#       - 1883:1883
+#       - 9001:9001
+#     volumes:
+#       - ./mqtt/mosquitto.conf:/mosquitto/config/mosquitto.conf
+#       - ./mqtt/log:/mosquitto/log
+#       - ./mqtt/data:/mosquitto/data
+
+
