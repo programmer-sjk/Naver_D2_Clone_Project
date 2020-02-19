@@ -1,20 +1,32 @@
 import React from 'react';
-//import logo from '/images/top_logo.png';
+import {Route, Link} from 'react-router-dom';
 import './App.css';
 
+import Hello from './components/hello'
+import News from './components/news'
+import Program from './components/program'
+import About from './components/about'
+
 function App() {
-  return (
-    <div className="header_section">
-        <img src="/images/top_logo.png" className="main_logo"/>
-        <ul>
-            <li>Hello world</li>
-            <li>D2 News</li>
-            <li>D2 Program</li>
-            <li>About D2</li>
-        </ul>
-        {/*<img className="main_logo"/>*/}
-    </div>
-  );
+    return (
+        <div>
+            <div className="header_section">
+                <img src="/images/top_logo.png" className="main_logo"/>
+                <ul>
+                    <li><Link to="/hello">Hello world</Link></li>
+                    <li><Link to="/news">D2 News</Link></li>
+                    <li><Link to="/program">D2 Program</Link></li>
+                    <li><Link to="/about">About D2</Link></li>
+                </ul>
+            </div>
+            <div>
+                <Route path="/hello" component={Hello}/>
+                <Route path="/news" component={News}/>
+                <Route path="/program" component={Program}/>
+                <Route path="/about" component={About}/>
+            </div>
+        </div>
+    );
 }
 
 export default App;

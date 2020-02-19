@@ -2,8 +2,7 @@
   max-width: 1180px;
   margin:0 auto; 
   height: 66px;
-  position: relative;
-  top: 20px;
+  
 }
 
 .main_logo {
@@ -18,9 +17,15 @@ ul {
     list-style:none;
 }
 
-li {
+ul li {
     padding: 10px 20px;
     border : 0;
     float: left;
     cursor: pointer;
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #000;
 }
