@@ -24,6 +24,8 @@ ul li a {
     cursor: pointer;
     color: #a0a0a0;
     text-decoration: none;
+    line-height: 46px;
+    vertical-align: middle;
 }
 
 a:hover{
