@@ -29,6 +29,11 @@ function App() {
                 <Route path="/program" component={Program}/>
                 <Route path="/about" component={About}/>
             </div>
+
+            
+            <div class="main_banner"></div>
+            
+             
         </div>
     );
 }

@@ -31,3 +31,14 @@ ul li a {
 a:hover{
     color: #000;
 }
+
+.main_banner_wrap {
+    text-align: center;
+}
+
+.main_banner {
+    width: 100%;
+    
+    height: 440px;
+    background: url('/images/banner1.png') no-repeat center;
+}
