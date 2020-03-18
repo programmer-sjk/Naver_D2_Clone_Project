@@ -35,8 +35,12 @@ function App() {
                 <Route path="/about" component={About}/>
             </div>
 
+            <div className="main_banner_wrap">
+                <div className="arrow main_banner_l_arrow"></div>
+                <div className="main_banner"></div>
+                <div className="arrow main_banner_r_arrow"></div>
+            </div>
             
-            <div class="main_banner"></div>
             
              
         </div>
