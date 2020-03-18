@@ -1,14 +1,14 @@
 .header_section {
-  max-width: 1180px;
+  max-width: 1200px;
   margin:0 auto; 
   height: 66px;
-  
+  font-family: Avenir,'Lato',"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔바른고딕",NanumBarunGothic,"나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
 }
 
 .main_logo {
     width: 160px;
     height: 48px;
-    padding-right: 40px;
+    padding-right: 20px;
     float: left;
     cursor: pointer;
 }
@@ -18,7 +18,7 @@ ul {
 }
 
 ul li a {
-    padding: 10px 20px;
+    padding: 10px 15px;
     border : 0;
     float: left;
     cursor: pointer;
@@ -32,13 +32,46 @@ a:hover{
     color: #000;
 }
 
+.search_txt {
+    border: 1px solid #a0a0a0;
+    margin: 15px 0px 25px 150px;
+    width: 230px;
+    height: 32px;
+    vertical-align: middle;
+    float: left;
+    padding-left: 10px;
+}
+
+.search {
+    width:36px;
+    height:36px;
+    margin-top: 10px;
+}
+
+.searchBox {
+    height:36px;
+    max-height:36px;
+    float: left;
+    margin-top: 15px;
+}
+
+.searchBtn {
+    height:36px;
+    background: url( "/images/top_search.png" ) no-repeat center;
+    width: 36px;
+    border: none;
+    border-left: 1px solid #E7E7E7;
+    margin-left: 20px;
+
+}
+
 .main_banner_wrap {
     text-align: center;
 }
 
 .main_banner {
     width: 100%;
-    
-    height: 440px;
+    height: 400px;
     background: url('/images/banner1.png') no-repeat center;
+    
 }

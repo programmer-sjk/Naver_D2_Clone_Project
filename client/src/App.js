@@ -20,6 +20,11 @@ function App() {
                     <li><Link to="/program">D2 Program</Link></li>
                     <li><Link to="/about">About D2</Link></li>
                 </ul>
+                <input type="text" placeholder="D2에서 검색" className="search_txt"/>
+                <div className="searchBox">
+                    <button className="searchBtn"></button>
+                    {/* <img src="/images/top_search.png" className="search"/> */ }
+                </div>
             </div>
             <div>
                 {/*<Route path="/" component={Home} exact={true}/>*/}
