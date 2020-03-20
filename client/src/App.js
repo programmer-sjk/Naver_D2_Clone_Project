@@ -13,6 +13,7 @@ function App() {
         <div>
             <div className="header_section">
                 <ul>
+
                     {/*<li><Link to="/"></Link></li>*/}
                     <li><Link to="/"><img src="/images/top_logo.png" className="main_logo"/></Link></li>
                     <li><Link to="/hello">Hello world</Link></li>
