@@ -4,7 +4,6 @@ import Navigator from './components/navigation'
 function App() {
     return (
         <div>
-            
             <Navigator></Navigator>
         </div>
     );
