@@ -14,7 +14,7 @@
 
 .main_banner_l_arrow {
     width: 30px;
-    height: 400px;
+    height: 370px;
     left: 18px;
     background: url('/images/m_arrow.png') no-repeat center;
     background-position: 0px center;
@@ -26,7 +26,7 @@
 
 .main_banner_r_arrow {
     width: 30px;
-    height: 400px;
+    height: 370px;
     right: 18px;
     background: url('/images/m_arrow.png') no-repeat center;
     background-position: -70px center;
@@ -43,10 +43,9 @@
 
 .banner_navi {
     position: absolute;
-    width: 100%;
+    width: 50%;
     bottom: 20px;
     left: 47%;
-    
 }
 
 .circle {
@@ -63,19 +62,20 @@
 .circle:hover {
     opacity: 1;
 }
-/*
-.slide ul{width:calc(100%);display:flex;animation:slide 8s infinite;} 
+
+.slide ul{width:calc(100% * 4);display:flex;animation:slide 8s infinite;} 
 .slide li{width:calc(100% / 4);height:400px;}
 .slide li:nth-child(1){background: url('/images/banner1.png') no-repeat center;}
 .slide li:nth-child(2){background: url('/images/banner2.png') no-repeat center;}
 .slide li:nth-child(3){background: url('/images/banner3.png') no-repeat center;}
 .slide li:nth-child(4){background: url('/images/banner4.png') no-repeat center;}
-
+/*
 @keyframes slide {
     0% {margin-left:20;} 
-    50% {margin-left:200px;}
+    50% {margin-left:200px; background: url('/images/banner2.png') no-repeat center;}
     100% {margin-left:0;}
 }
+*/
 
 @keyframes slide {
     0% {margin-left:20;} 
@@ -88,4 +88,3 @@
     85% {margin-left:-300%;}
     100% {margin-left:0;}
 }
-*/
