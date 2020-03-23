@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title {
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 14px;
+}
+
+.preview {
+  font-size: 14px;
+  overflow: hidden;
+  max-height: 40px;
+  margin-bottom: 15px;
+}
+
+.post_date {
+  font-size: 12px;
+  color: #b5b5b5;
+}
+
+.view_count {
+  font-size: 12px;
+  color: #b5b5b5;
+}
+
+.delimeter {
+  margin: 0 15px;
+  color: #eaeaea;
+}
+
+.pre_img {
+  float: left;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
