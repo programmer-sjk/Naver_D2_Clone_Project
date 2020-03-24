@@ -93,9 +93,7 @@
     max-width: 1100px;
     height: 150px;
     position: relative;
-    margin-top: 50px;
-    margin-left: 400px;
-    
+    margin-top: 50px;    
 }
 
 .text_section{
@@ -125,6 +123,7 @@
 
 .content_wrapper {
     float: left;
+    margin-left: 250px;
 }
 
 .footer {
@@ -142,17 +141,29 @@
     vertical-align: middle;
 }
 
-.other_site .link{
-    padding: 10px;
+.other_site .link {
+    padding: 10px 0px 0px 10px;
 }
 
-.other_site .link li{
+.other_site .link li {
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.other_site .link .divide {
+    padding-left: 200px;
+}
+
+.other_site .link .etc {
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-left: -40px;
     cursor: pointer;
 }
 
 .footer .copy_right {
+    border-top: 1px solid #efefef;
     width: 1180px;
     margin: 0 auto;
     font-size: 11px;

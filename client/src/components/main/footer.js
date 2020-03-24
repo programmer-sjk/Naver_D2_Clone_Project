@@ -11,9 +11,9 @@ const Footer = () => {
                     <li><a href="https://deview.kr/2019"><img src="/images/footer3.png" /></a></li>
                     <li><a href="https://naver.github.io/"><img src="/images/footer4.png" /></a></li>
                     <li><a href="http://www.d2startup.com/"><img src="/images/footer5.png" /></a></li>
-                    <li><a href="http://www.d2startup.com/"><img src="/images/mail.png" /></a></li>
-                    <li><a href="http://www.d2startup.com/"><img src="/images/facebook.png" /></a></li>
-                    <li><a href="http://www.d2startup.com/"><img src="/images/atom.png" /></a></li>
+                    <li className="etc divide"><a href=""><img src="/images/mail.png" /></a></li>
+                    <li className="etc"><a href="https://www.facebook.com/naverd2"><img src="/images/facebook.png" /></a></li>
+                    <li className="etc"><a href="https://d2.naver.com/d2.atom"><img src="/images/atom.png"/></a></li>
                 </ul>
             </div>
             <div className="copy_right">Copyright © NAVER Corp. All Rights Reserved.</div>
