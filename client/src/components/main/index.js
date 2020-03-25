@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Slideshow from './slideshow'
 import Contents from './contents'
 import Sidebar from './sidebar'
@@ -7,9 +7,11 @@ import 'css/Main.css';
 
 const Main = () => {
     const elements = [1,2,3,4,5,6,7,8,9,10];
+    const [slideIdx, setSlideIdx] = useState(1);
+
     return (
         <div>    
-            <Slideshow></Slideshow>
+            <Slideshow slideIdx={slideIdx} setSlideIdx={setSlideIdx}></Slideshow>
             <div className="content_wrapper">
                 {elements.map((v, idx) => <Contents key={idx}></Contents>)}
             </div>
