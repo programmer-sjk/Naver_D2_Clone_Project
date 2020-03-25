@@ -25,20 +25,28 @@ code {
   margin-bottom: 15px;
 }
 
-.post_date {
-  font-size: 12px;
-  color: #b5b5b5;
-}
-
-.view_count {
-  font-size: 12px;
-  color: #b5b5b5;
-}
-
-.delimeter {
-  margin: 0 15px;
-  color: #eaeaea;
-}
+.info {
+    color: #b5b5b5;
+  }
+  
+  .post_date {
+    padding-left: 5px;
+    display: inline-block;
+    font-size: 12px;
+    color: #b5b5b5;
+  }
+  
+  .view_count {
+    padding-left: 5px;
+    display: inline-block;
+    font-size: 12px;
+    color: #b5b5b5;
+  }
+  
+  .delimeter {
+    margin: 0 5px;
+    color: #eaeaea;
+  }
 
 .pre_img {
   float: left;

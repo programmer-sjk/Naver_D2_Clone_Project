@@ -11,7 +11,7 @@ const Main = () => {
         <div>    
             <Slideshow></Slideshow>
             <div className="content_wrapper">
-                {elements.map((v) => <Contents></Contents>)}
+                {elements.map((v, idx) => <Contents key={idx}></Contents>)}
             </div>
             <Sidebar></Sidebar>
             <Footer></Footer>
