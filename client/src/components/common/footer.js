@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import 'css/Main.css';
 
 const Footer = () => {
     return (

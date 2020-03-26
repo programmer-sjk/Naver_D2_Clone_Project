@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import 'css/Main.css';
 import 'XEIcon/xeicon.min.css';
 
 const Contents = () => {

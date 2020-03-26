@@ -1,5 +1,6 @@
 .header_section {
   max-width: 1200px;
+  min-width: 1200px;
   margin:0 auto; 
   height: 66px;
   font-family: Avenir,'Lato',"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔바른고딕",NanumBarunGothic,"나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
@@ -31,6 +32,7 @@
 a:hover{
     color: #000;
 }
+
 
 .search_txt {
     border: 1px solid #a0a0a0;

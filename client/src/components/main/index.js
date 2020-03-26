@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
+
 import Slideshow from './slideshow'
-import Contents from './contents'
 import Sidebar from './sidebar'
-import Footer from './footer'
+
+import Contents from 'components/common/contents'
 import 'css/Main.css';
 
 const Main = () => {
@@ -12,11 +13,12 @@ const Main = () => {
     return (
         <div>    
             <Slideshow slideIdx={slideIdx} setSlideIdx={setSlideIdx}></Slideshow>
-            <div className="content_wrapper">
-                {elements.map((v, idx) => <Contents key={idx}></Contents>)}
+            <div className="main_content_wrapper">
+                <div className="article">
+                    {elements.map((v, idx) => <Contents key={idx}></Contents>)} 
+                </div>
+                <Sidebar></Sidebar>
             </div>
-            <Sidebar></Sidebar>
-            <Footer></Footer>
         </div>
     )
 }

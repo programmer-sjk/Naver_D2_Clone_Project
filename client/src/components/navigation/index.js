@@ -14,7 +14,6 @@ const Navigator = () => {
         <div>    
             <div className="header_section">
                 <ul className="navi_ul">
-                    {/*<li><Link to="/"></Link></li>*/}
                     <li><Link to="/"><img src="/images/top_logo.png" className="main_logo"/></Link></li>
                     <li><Link to="/hello">Hello world</Link></li>
                     <li><Link to="/news">D2 News</Link></li>
@@ -24,11 +23,9 @@ const Navigator = () => {
                 <input type="text" placeholder="D2에서 검색" className="search_txt"/>
                 <div className="searchBox">
                     <button className="searchBtn"></button>
-                    {/* <img src="/images/top_search.png" className="search"/> */ }
                 </div>
             </div>
             <div>
-                {/*<Route path="/" component={Home} exact={true}/>*/}
                 <Route path="/" component={Main} exact={true}/>
                 <Route path="/hello" component={Hello}/>
                 <Route path="/news" component={News}/>
