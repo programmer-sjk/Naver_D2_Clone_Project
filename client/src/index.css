@@ -1,10 +1,53 @@
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+a,
+button,
+select {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Avenir, 'Lato', '나눔바른고딕', NanumBarunGothic,
+    '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '나눔고딕', NanumGothic,
+    '맑은 고딕', 'Malgun Gothic', '돋움', dotum, AppleGothic, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+input,
+textarea,
+select,
+button,
+table {
+  font-family: Avenir, 'Lato', '나눔바른고딕', NanumBarunGothic,
+    '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '나눔고딕', NanumGothic,
+    '맑은 고딕', 'Malgun Gothic', '돋움', dotum, AppleGothic, sans-serif;
+  font-size: 12px;
 }
 
 code {
@@ -12,7 +55,7 @@ code {
     monospace;
 }
 
-.title {
+/* .title {
   font-size: 24px;
   font-weight: normal;
   padding-bottom: 14px;
@@ -82,3 +125,4 @@ code {
 .description .desc {
   font-size: 17px;
 }
+*/
