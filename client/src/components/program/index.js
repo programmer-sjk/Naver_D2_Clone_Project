@@ -1,5 +1,6 @@
 import React from 'react'
 import Description from 'components/common/description'
+import 'css/Program.css';
 
 const Program = () => {
     const bgColor ='#00b485';
@@ -9,7 +10,9 @@ const Program = () => {
     return (
         <div>
             <Description bgColor={bgColor} title={title} desc={desc}></Description>
-            Program
+            <div>
+                <div className="img_box"></div>
+            </div>
         </div>
     )
 }

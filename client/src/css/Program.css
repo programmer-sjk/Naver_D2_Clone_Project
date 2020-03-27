@@ -1,0 +1,6 @@
+.img_box {
+    border-radius: 50%;
+    background: url( "/images/deview.jpg" ) no-repeat center;
+    width: 224px;
+    height: 224px;
+}
