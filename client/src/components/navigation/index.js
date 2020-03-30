@@ -15,10 +15,10 @@ const Navigator = () => {
             <div className="header_section">
                 <ul className="navi_ul">
                     <li><Link to="/"><img src="/images/top_logo.png" className="main_logo"/></Link></li>
-                    <li><Link to="/hello">Hello world</Link></li>
-                    <li><Link to="/news">D2 News</Link></li>
-                    <li><Link to="/program">D2 Program</Link></li>
-                    <li><Link to="/about">About D2</Link></li>
+                    <li className="txt"><Link to="/hello">Hello world</Link></li>
+                    <li className="txt"><Link to="/news">D2 News</Link></li>
+                    <li className="txt"><Link to="/program">D2 Program</Link></li>
+                    <li className="txt"><Link to="/about">About D2</Link></li>
                 </ul>
                 <input type="text" placeholder="D2에서 검색" className="search_txt"/>
                 <div className="searchBox">

@@ -19,7 +19,8 @@
 }
 
 .navi_ul li a {
-    padding: 10px 15px;
+    padding: 0px 0px 10px 0px;
+    margin: 0px 10px;
     border : 0;
     float: left;
     cursor: pointer;
@@ -27,16 +28,22 @@
     text-decoration: none;
     line-height: 46px;
     vertical-align: middle;
+    font-size: 16px;
+    height: 25px;
 }
 
-a:hover{
+.navi_ul li.txt a:hover{
     color: #000;
 }
 
+.navi_ul li.txt a:focus{
+    color: #000;
+    border-bottom: 2px solid #32cda0;
+}
 
 .search_txt {
     border: 1px solid #a0a0a0;
-    margin: 15px 0px 25px 150px;
+    margin: 8px 0px 25px 150px;
     width: 230px;
     height: 32px;
     vertical-align: middle;
@@ -54,7 +61,7 @@ a:hover{
     height:36px;
     max-height:36px;
     float: left;
-    margin-top: 15px;
+    margin-top: 8px;
 }
 
 .searchBtn {
