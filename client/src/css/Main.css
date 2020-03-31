@@ -536,12 +536,14 @@ legend {
 
 .other_site .link {
   padding: 10px 0px 0px 10px;
+  height: 100px;
 }
 
 .other_site .link li {
   display: inline-block;
   padding: 10px;
   cursor: pointer;
+  height: 70px;
 }
 
 .other_site .link .divide {

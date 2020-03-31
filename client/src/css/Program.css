@@ -1,6 +1,71 @@
+.content_area {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.content_wrap {
+    margin: 30px;
+    padding-left: 150px;
+}
+
 .img_box {
     border-radius: 50%;
-    background: url( "/images/deview.jpg" ) no-repeat center;
     width: 224px;
     height: 224px;
+    float: left;
+}
+
+.content {
+    float: left;
+    height: 224px;
+    width: 520px;
+    margin-left: 30px;
+    overflow: hidden;
+}
+
+.content .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #666;
+    line-height: 55px;
+}
+
+.content .text {
+    font-size: 14px;
+    color: #666;
+    line-height: 25px;
+}
+
+.content .detail {
+    margin-top: 10px;
+    font-size: 14px;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle;
+    padding: 0 20px 0 22px;
+    color: #00c374;
+    border: 1px solid #00c374;
+    border-radius: 17.5px;
+}
+
+.content .detail a:hover {
+    color: inherit;
+}
+
+.clear {
+    clear: both;
+}
+
+.scroll_up {
+    width: 100%;
+    max-width: 1180px;
+    height: 50px;
+    margin: 0 auto;
+    color: #b5b5b5;  
+}
+
+.scroll_up .right {
+    float :right;
 }
