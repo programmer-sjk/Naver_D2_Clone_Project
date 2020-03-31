@@ -1,5 +1,6 @@
 import React from 'react'
 import Description from 'components/common/description'
+import 'css/About.css';
 
 const About = () => {
     const bgColor ='#0090d7';
@@ -9,7 +10,13 @@ const About = () => {
     return (
         <div>
             <Description bgColor={bgColor} title={title} desc={desc}></Description>
-            About D2
+            <div className="content_area">
+                <div className="about_schedule">
+                    <h2> 2020 주요 일정 </h2>
+                    <button className="btn_history">D2 히스토리 바로가기</button>
+                </div>
+                
+            </div>
         </div>
     )
 }

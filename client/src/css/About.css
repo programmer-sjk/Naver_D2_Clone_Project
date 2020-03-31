@@ -1,0 +1,27 @@
+.content_area {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.about_schedule {
+    max-width: 840px;
+    margin: 0 150px;   
+}
+
+.about_schedule h2{
+    font-size: 30px;
+    display: inline-block;
+}
+
+.about_schedule .btn_history {
+    padding: 6px;
+    float: right;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
