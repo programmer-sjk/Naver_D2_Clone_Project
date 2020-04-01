@@ -46,7 +46,6 @@ const Program = () => {
     ]
 
     const scrollToTop = () => {
-        console.log('aa')
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
