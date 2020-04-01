@@ -84,3 +84,15 @@ code {
   .description .desc {
     font-size: 17px;
   }
+
+  .scroll_top {
+    position: fixed;
+    right: 380px;
+    bottom: 26px;
+    color: #a5a5a5;
+    cursor: pointer;
+  }
+
+  .scroll_top:hover {
+    color: black;
+  }
