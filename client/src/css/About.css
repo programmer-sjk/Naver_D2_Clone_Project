@@ -133,3 +133,80 @@
     text-align: center;
     font-size: 36px;
 }
+
+.year_begin {
+    margin-top: 20px;
+    position: relative;
+}
+
+.year_begin:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #d5d5d5;
+    content: '';
+}
+
+.year {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    position: relative;
+    background-color: #32cda0;
+    font-size: 24px;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.year_item {
+    position: relative;
+    padding-top: 39px;
+}
+
+.year_item ul li {
+    overflow: hidden;
+    position: relative;
+    height: 120px;
+}
+
+.year_item .year_title {
+    float: left;
+    width: 50%;
+    padding-right: 50px;
+    font-size: 25px;
+    font-weight: normal;
+    color: #1cba8c;
+    text-align: right;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.year_item dl {
+    float: right;
+    width: 50%;
+    padding: 2px 0 0 50px;
+    font-size: 14px;
+    color: #555;
+    line-height: 22px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.dot {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin-left: -8px;
+    background-size: 20px 20px;
+    background-color: #fff;
+    border: 1px solid #32cda0;
+}

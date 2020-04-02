@@ -71,6 +71,54 @@ const About = () => {
                     <p> 개발자들을 위한 탁월한 지식과 경험을 공유하며 함께 성장합니다! </p>
                     <div className="history">
                         <h2>History</h2>
+                        <div className="year_begin">
+                            <div className="year">2019</div>
+                            <div className="year_item">
+                                <ul>
+                                    <li>
+                                        <span className="dot"></span>
+                                        <strong className="year_title">NAVER TECH CONCERT</strong>
+                                        <dl>
+                                            <dt><dd>2019.4.11</dd></dt>
+                                            <dt><dd>FRONT END 개발 주제</dd></dt>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <span className="dot"></span>
+                                        <strong className="year_title">NAVER CAMPUS HACKDAY</strong>
+                                        <dl>
+                                            <dt><dd>2019.5.16~17</dd></dt>
+                                            <dt><dd>SUMMER HACKDAY 진행</dd></dt>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div className="year">2018</div>
+                            <div className="year_item">
+                                <ul>
+                                    <li>
+                                        <span className="dot"></span>
+                                        <strong className="year_title">NAVER TECH CONCERT :ANDROID</strong>
+                                        <dl>
+                                            <dt><dd>2018.11.1~2</dd></dt>
+                                            <dt><dd>주제별 기술 공유 세미나</dd></dt>
+                                            <dt><dd>안드로이드 개발을 주제로 진행</dd></dt>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <span className="dot"></span>
+                                        <strong className="year_title">DEVIEW 2018</strong>
+                                        <dl>
+                                            <dt><dd>2018.10.11~12</dd></dt>
+                                            <dt><dd>AI, 딥러닝, 빅데이터, 검색, AR, 블록체인 주제 강의</dd></dt>
+                                            <dt><dd>xDM platform 공개</dd></dt>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
