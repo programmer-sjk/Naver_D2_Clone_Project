@@ -1,5 +1,8 @@
 import React, {useEffect} from 'react'
 import Description from 'components/common/description'
+import Schedule from './schedule.js'
+import History from './history.js'
+
 import 'css/About.css';
 
 const About = () => {
@@ -30,6 +33,36 @@ const About = () => {
         }
     ]
     
+    const histories = [
+        {
+            year: '2019',
+            info: [
+                {title: 'NAVER TECH CONCERT', detail: ['2019.4.11', 'FRONT END 개발 주제']},
+                {title: 'NAVER CAMPUS HACKDAY', detail: ['2019.5.16~17', 'SUMMER HACKDAY 진행']}
+            ]
+        },
+        {
+            year: '2018',
+            info: [
+                {title: 'NAVER TECH CONCERT :ANDROID', detail: ['2018.11.1~2', '주제별 기술 공유 세미나', '안드로이드 개발을 주제로 진행']},
+                {title: 'DEVIEW 2018', detail: ['2018.10.11~12', 'AI, 딥러닝, 빅데이터, 검색, AR, 블록체인 주제 강의', 'xDM platform 공개']}
+            ]
+        },
+        {
+            year: '2017',
+            info: [
+                {title: 'DEVIEW 2017', detail: ['2017.10.16~17', '네이버랩스 유럽, AI/머신러닝 기술적용 사례 다수 발표', '로봇 라인업 9종 공개']},
+            ]
+        },
+        {
+            year: '2016',
+            info: [
+                {title: 'DEVIEW 2016', detail: ['2019.4.11', 'FRONT END 개발 주제']},
+                {title: 'D2 CAMPUS HACKDAY', detail: ['2016.5', '네이버 개발자들과 함께하는 1박 2일 해커톤 시작']}
+            ]
+        },
+    ]
+
     const moveHistory = () => {
         window.scrollTo({top: 887, behavior:'smooth'})
     }
@@ -45,21 +78,7 @@ const About = () => {
                     </div>
                     <div className="schedule_list">
                         {datas.map((data, idx) => 
-                            <div className="schedule">
-                                <div>
-                                    <div className="schedule_img"><img src={data.image}/></div>
-                                    <div className="schedule_txt">
-                                        <p className="title">{data.title}</p>
-                                        <p className="desc">{data.text}</p>
-                                    </div>
-                                </div>
-                                <div className="date_info">
-                                    {data.date.map(v => 
-                                        <div>{v}</div>
-                                    )}
-                                    <a href={data.link}>바로가기</a>
-                                </div>
-                            </div>
+                            <Schedule data={data}></Schedule>
                         )}
                     </div>
                 </div>
@@ -72,52 +91,9 @@ const About = () => {
                     <div className="history">
                         <h2>History</h2>
                         <div className="year_begin">
-                            <div className="year">2019</div>
-                            <div className="year_item">
-                                <ul>
-                                    <li>
-                                        <span className="dot"></span>
-                                        <strong className="year_title">NAVER TECH CONCERT</strong>
-                                        <dl>
-                                            <dt><dd>2019.4.11</dd></dt>
-                                            <dt><dd>FRONT END 개발 주제</dd></dt>
-                                        </dl>
-                                    </li>
-                                    <li>
-                                        <span className="dot"></span>
-                                        <strong className="year_title">NAVER CAMPUS HACKDAY</strong>
-                                        <dl>
-                                            <dt><dd>2019.5.16~17</dd></dt>
-                                            <dt><dd>SUMMER HACKDAY 진행</dd></dt>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </div>
-
-
-                            <div className="year">2018</div>
-                            <div className="year_item">
-                                <ul>
-                                    <li>
-                                        <span className="dot"></span>
-                                        <strong className="year_title">NAVER TECH CONCERT :ANDROID</strong>
-                                        <dl>
-                                            <dt><dd>2018.11.1~2</dd></dt>
-                                            <dt><dd>주제별 기술 공유 세미나</dd></dt>
-                                            <dt><dd>안드로이드 개발을 주제로 진행</dd></dt>
-                                        </dl>
-                                    </li>
-                                    <li>
-                                        <span className="dot"></span>
-                                        <strong className="year_title">DEVIEW 2018</strong>
-                                        <dl>
-                                            <dt><dd>2018.10.11~12</dd></dt>
-                                            <dt><dd>AI, 딥러닝, 빅데이터, 검색, AR, 블록체인 주제 강의</dd></dt>
-                                            <dt><dd>xDM platform 공개</dd></dt>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </div>
+                            {histories.map((history, idx) => 
+                                <History history={history}></History>
+                            )}                           
                         </div>
                     </div>
                 </div>
