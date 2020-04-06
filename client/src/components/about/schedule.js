@@ -12,8 +12,8 @@ const Schedule = ({data}) => {
                 </div>
             </div>
             <div className="date_info">
-                {data.date.map(v => 
-                    <div>{v}</div>
+                {data.date.map((v, idx) => 
+                    <div key={idx}>{v}</div>
                 )}
                 <a href={data.link}>바로가기</a>
             </div>

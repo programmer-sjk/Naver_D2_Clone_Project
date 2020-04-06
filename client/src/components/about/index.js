@@ -78,7 +78,7 @@ const About = () => {
                     </div>
                     <div className="schedule_list">
                         {datas.map((data, idx) => 
-                            <Schedule data={data}></Schedule>
+                            <Schedule data={data} key={idx}></Schedule>
                         )}
                     </div>
                 </div>
@@ -92,7 +92,7 @@ const About = () => {
                         <h2>History</h2>
                         <div className="year_begin">
                             {histories.map((history, idx) => 
-                                <History history={history}></History>
+                                <History history={history} key={idx}></History>
                             )}                           
                         </div>
                     </div>

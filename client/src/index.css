@@ -88,7 +88,7 @@ code {
   .scroll_top {
     position: fixed;
     right: 380px;
-    bottom: 26px;
+    bottom: 20px;
     color: #a5a5a5;
     cursor: pointer;
   }

@@ -13,7 +13,7 @@ const Footer = () => {
         if(scrollTop >= 200) 
             setScrollActive(true);
         else
-             setScrollActive(false);
+            setScrollActive(false);
     };
 
     const scrollToTop = () => {

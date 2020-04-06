@@ -45,23 +45,11 @@ const Program = () => {
         }
     ]
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
-    }
-
     return (
         <div>
             <Description bgColor={bgColor} title={title} desc={desc}></Description>
             <div className="content_area">
                 {elements.map((element, idx) => <Content data={element} key={idx}></Content>)}
-            </div>
-            <div className="scroll_up" onClick={scrollToTop}>
-                <div className="right">
-                    <i className="xi-caret-up-circle-o xi-2x"></i>
-                </div>
             </div>
         </div>
     )
