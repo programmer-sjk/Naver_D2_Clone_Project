@@ -514,6 +514,10 @@ legend {
   margin-left: 250px;
 }
 
+.footer_wrap {
+  position: relative;
+}
+
 .footer {
   height: 160px;
   width: 100%;

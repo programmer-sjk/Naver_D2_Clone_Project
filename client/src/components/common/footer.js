@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 const Footer = () => {
     const [scrollActive, setScrollActive] = useState(false);
+    const [scrollBottomFlag, setScrollBottomFlag] = useState(false);
 
     useEffect(() => {
         console.log('useEffect')
@@ -14,6 +15,17 @@ const Footer = () => {
             setScrollActive(true);
         else
             setScrollActive(false);
+
+        const scrollHeight = document.documentElement.scrollHeight;
+        const innerHeight = window.innerHeight;
+        const footerSize = 160;
+        
+        if(scrollHeight - innerHeight - footerSize < scrollTop) {
+            setScrollBottomFlag(true);
+        } else {
+            setScrollBottomFlag(false);
+        }
+
     };
 
     const scrollToTop = () => {
@@ -24,8 +36,8 @@ const Footer = () => {
     }
 
     return (
-        <div>
-            <div className="scroll_top" style={scrollActive? {display: 'block'} : {display: 'none'}} onClick={scrollToTop}>
+        <div className="footer_wrap">
+            <div className="scroll_top" onClick={scrollToTop} style={scrollActive? {display: 'block'} : {display: 'none'}, scrollBottomFlag? { position: 'absolute', bottom: '160px'}:{position: 'fixed', bottom: '20px'}}>
                 <i className="xi-caret-up-circle-o xi-2x"></i>
             </div>
             <div className="footer">
