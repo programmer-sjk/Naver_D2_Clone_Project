@@ -12,8 +12,8 @@ const PostArticle = ({ articles, pageSize, currentPage }) => {
   console.log(article);
   return (
     <>
-      {article.map(item => (
-        <ArticleItem article={item} />
+      {article.map((item, idx) => (
+        <ArticleItem article={item} key={idx} />
       ))}
     </>
   );

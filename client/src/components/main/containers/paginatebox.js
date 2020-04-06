@@ -11,11 +11,12 @@ const PaginateBox = (props) => {
 
   const pages = [...Array(pageCount).keys()].map((i) => i + 1);
   return (
-    <div class="paginate_box">
-      <div class="paginate">
-        {pages.map((page) => (
+    <div className="paginate_box">
+      <div className="paginate">
+        {pages.map((page, idx) => (
           <a
             // href="/home?page={page}"
+            key={idx}
             className={page === currentPage ? 'btn_num select' : 'btn_num'}
             style={{ cursor: 'pointer' }}
             data-number={page - 1}
