@@ -4,13 +4,11 @@ import Slideshow from './slideshow';
 import Sidebar from './sidebar';
 
 import Contents from 'components/common/contents';
-import PostArticle from './containers/postarticle';
-import ArticleItem from './containers/articleitem';
-import PaginateBox from './containers/paginatebox';
+import PostArticle from 'components/common/postarticle';
+import PaginateBox from 'components/common/paginatebox';
 import 'css/Main.css';
 
 const Main = () => {
-  const elements = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const [slideIdx, setSlideIdx] = useState(1);
   const [pageSize, setPageSize] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
