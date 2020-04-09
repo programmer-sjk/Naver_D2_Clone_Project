@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { Route, Link, Redirect } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import 'css/App.css';
 
 import Main from 'components/main';
@@ -8,6 +8,7 @@ import News from 'components/news';
 import Program from 'components/program';
 import About from 'components/about';
 import Search from 'components/search'; 
+import SearchBtn from './searchBtn'
 
 const Navigator = () => {
   return (
@@ -32,12 +33,7 @@ const Navigator = () => {
             <Link to="/about">About D2</Link>
           </li>
         </ul>
-        <input type="text" placeholder="D2에서 검색" className="search_txt" />
-        <Link to="/search">
-            <div className="searchBox">
-                <button className="searchBtn" onClick={() => {console.log('click')}}></button>
-            </div>
-        </Link>
+        <SearchBtn></SearchBtn>
       </div>
       <div>
         <Route path="/" component={Main} exact={true} />

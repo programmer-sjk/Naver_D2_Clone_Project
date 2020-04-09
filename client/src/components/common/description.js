@@ -3,9 +3,7 @@ import React from 'react';
 
 const Description = ({bgColor, title, desc}) => {
     const descStyle = {
-        backgroundColor:bgColor,
-        width: "100%",
-        height: "150px",
+        backgroundColor:bgColor
     }
 
     return (

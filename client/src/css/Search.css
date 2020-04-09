@@ -1,0 +1,14 @@
+.keyword {
+    height: 112px;
+    line-height: 112px;
+    vertical-align: middle;
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.keyword_wrap {
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #f7f7f7;
+}

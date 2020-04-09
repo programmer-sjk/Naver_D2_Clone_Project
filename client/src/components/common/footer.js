@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 const Footer = () => {
+    const SCROLL_UP_BUTTON_APPEAR_POS = 200;
     const [scrollActive, setScrollActive] = useState(false);
     const [scrollBottomFlag, setScrollBottomFlag] = useState(false);
 
@@ -11,7 +12,7 @@ const Footer = () => {
 
     const onScroll = (e) => {
         const scrollTop = ('scroll', e.srcElement.scrollingElement.scrollTop);
-        if(scrollTop >= 200) 
+        if(scrollTop >= SCROLL_UP_BUTTON_APPEAR_POS) 
             setScrollActive(true);
         else
             setScrollActive(false);
@@ -37,7 +38,7 @@ const Footer = () => {
 
     return (
         <div className="footer_wrap">
-            <div className="scroll_top" onClick={scrollToTop} style={scrollActive? {display: 'block'} : {display: 'none'}, scrollBottomFlag? { position: 'absolute', bottom: '160px'}:{position: 'fixed', bottom: '20px'}}>
+            <div className="scroll_top" onClick={scrollToTop} style={scrollActive? (scrollBottomFlag? { position: 'absolute', bottom: '160px'} : {position: 'fixed', bottom: '20px'}) : {display: 'none'}}>
                 <i className="xi-caret-up-circle-o xi-2x"></i>
             </div>
             <div className="footer">
