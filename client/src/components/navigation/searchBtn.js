@@ -1,12 +1,11 @@
 import React, {useEffect} from 'react';
-import { Link, withRouter  } from 'react-router-dom';
+import { withRouter  } from 'react-router-dom';
 
 const SearchBtn = ({history}) => {
     let param = null;
 
     const search = () => {
-        console.log('inside of searchbtn : ' + '/search/' + param)
-        history.push('/search/' + param)
+        history.push('/search?keyword=' + param)
     }
 
     return (

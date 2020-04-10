@@ -1,18 +1,26 @@
-import React, {useEffect} from 'react';
-import Description from 'components/common/description'
+import React, {useEffect, useState} from 'react';
+import { useLocation  } from 'react-router-dom';
+import { search } from 'services/axios'
 import 'css/Search.css';
 
-const Search = ({match}) => {
-    const bgColor ='#f7f7f7';
-    const title = 'D2 Program';
-    const desc = '가치 있는 기술 지식 생산을 돕고, 경험을 나누며, 개발자를 지원합니다.';
+const Search = () => {
+    const keyword  = new URLSearchParams(useLocation().search).get('keyword');
+    const [resultString, setResultString] = useState('에 대한 결과');
 
-    const { keyword } = match.params;
+    useEffect(() => {
+        async function getSearchResult () {
+            const data = await search(keyword);
+            data.length === 0 && setResultString('에 대한 결과가 없습니다.');
+        }
 
+        getSearchResult()
+    })
     return (
         <div>
-            <div className="keyword_wrap">
-                <div className="keyword">{keyword}</div>
+            <div className="keyword_area">
+                <div className="keyword">
+                    <span className="text">'{keyword}'</span> {resultString}
+                </div>
             </div>
         </div>
     )

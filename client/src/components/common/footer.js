@@ -6,7 +6,6 @@ const Footer = () => {
     const [scrollBottomFlag, setScrollBottomFlag] = useState(false);
 
     useEffect(() => {
-        console.log('useEffect')
         window.addEventListener('scroll', onScroll);
     }, [])
 

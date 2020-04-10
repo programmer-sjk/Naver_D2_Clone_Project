@@ -35,13 +35,14 @@ const Navigator = () => {
         </ul>
         <SearchBtn></SearchBtn>
       </div>
+      <div className="clear"></div>
       <div>
         <Route path="/" component={Main} exact={true} />
         <Route path="/hello" component={Hello} />
         <Route path="/news" component={News} />
         <Route path="/program" component={Program} />
         <Route path="/about" component={About} />
-        <Route path="/search/:keyword" component={Search} />
+        <Route path="/search" component={Search} />
       </div>
     </div>
   );

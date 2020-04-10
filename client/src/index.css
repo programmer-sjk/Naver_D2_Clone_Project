@@ -97,3 +97,7 @@ code {
   .scroll_top:hover {
     color: black;
   }
+
+  .clear {
+    clear: both;
+  }

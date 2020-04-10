@@ -1,3 +1,5 @@
+
+
 .header_section {
   max-width: 1200px;
   min-width: 1200px;
@@ -49,12 +51,6 @@
     vertical-align: middle;
     float: left;
     padding-left: 10px;
-}
-
-.search {
-    width:36px;
-    height:36px;
-    margin-top: 10px;
 }
 
 .searchBox {
