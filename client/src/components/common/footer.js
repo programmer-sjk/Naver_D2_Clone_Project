@@ -1,14 +1,23 @@
 import React, {useState, useEffect} from 'react';
+import { withRouter } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({history}) => {
     const SCROLL_UP_BUTTON_APPEAR_POS = 200;
     const [scrollActive, setScrollActive] = useState(false);
     const [scrollBottomFlag, setScrollBottomFlag] = useState(false);
-
+    const [isScroll, setIsScroll] = useState(false);
+    
     useEffect(() => {
+        history.listen((location, action) => {            
+            setTimeout(() => {
+                setFooterBottom()
+            }, 1)
+        });
+
+        setFooterBottom();
         window.addEventListener('scroll', onScroll);
     }, [])
-
+    
     const onScroll = (e) => {
         const scrollTop = ('scroll', e.srcElement.scrollingElement.scrollTop);
         if(scrollTop >= SCROLL_UP_BUTTON_APPEAR_POS) 
@@ -19,14 +28,20 @@ const Footer = () => {
         const scrollHeight = document.documentElement.scrollHeight;
         const innerHeight = window.innerHeight;
         const footerSize = 160;
-        
+
         if(scrollHeight - innerHeight - footerSize < scrollTop) {
             setScrollBottomFlag(true);
         } else {
             setScrollBottomFlag(false);
         }
-
     };
+
+    const setFooterBottom = () => {
+        if(document.documentElement.scrollHeight == window.innerHeight)
+            setIsScroll(true)
+        else
+            setIsScroll(false);
+    }
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -36,7 +51,7 @@ const Footer = () => {
     }
 
     return (
-        <div className="footer_wrap">
+        <div className="footer_wrap" style={isScroll?  {position: 'fixed', bottom: '0px'} : {}}>
             <div className="scroll_top" onClick={scrollToTop} style={scrollActive? (scrollBottomFlag? { position: 'absolute', bottom: '160px'} : {position: 'fixed', bottom: '20px'}) : {display: 'none'}}>
                 <i className="xi-caret-up-circle-o xi-2x"></i>
             </div>
@@ -59,4 +74,4 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+export default withRouter(Footer);
