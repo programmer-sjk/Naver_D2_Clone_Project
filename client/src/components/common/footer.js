@@ -8,7 +8,7 @@ const Footer = ({history}) => {
     const [isScroll, setIsScroll] = useState(false);
     
     useEffect(() => {
-        history.listen((location, action) => {            
+        history.listen(() => {            
             setTimeout(() => {
                 setFooterBottom()
             }, 1)
@@ -37,7 +37,7 @@ const Footer = ({history}) => {
     };
 
     const setFooterBottom = () => {
-        if(document.documentElement.scrollHeight == window.innerHeight)
+        if(document.documentElement.scrollHeight === window.innerHeight)
             setIsScroll(true)
         else
             setIsScroll(false);
@@ -58,14 +58,14 @@ const Footer = ({history}) => {
             <div className="footer">
                 <div className="other_site">
                     <ul className="link">
-                        <li><a href="https://developers.naver.com/main/"><img src="/images/footer1.png" /></a></li>
-                        <li><a href="https://techcon.naver.com/"><img src="/images/footer2.png" /></a></li>
-                        <li><a href="https://deview.kr/2019"><img src="/images/footer3.png" /></a></li>
-                        <li><a href="https://naver.github.io/"><img src="/images/footer4.png" /></a></li>
-                        <li><a href="http://www.d2startup.com/"><img src="/images/footer5.png" /></a></li>
-                        <li className="etc divide"><a href=""><img src="/images/mail.png" /></a></li>
-                        <li className="etc"><a href="https://www.facebook.com/naverd2"><img src="/images/facebook.png" /></a></li>
-                        <li className="etc"><a href="https://d2.naver.com/d2.atom"><img src="/images/atom.png"/></a></li>
+                        <li><a href="https://developers.naver.com/main/"><img src="/images/footer1.png" alt="" /></a></li>
+                        <li><a href="https://techcon.naver.com/"><img src="/images/footer2.png" alt="" /></a></li>
+                        <li><a href="https://deview.kr/2019"><img src="/images/footer3.png" alt="" /></a></li>
+                        <li><a href="https://naver.github.io/"><img src="/images/footer4.png" alt="" /></a></li>
+                        <li><a href="http://www.d2startup.com/"><img src="/images/footer5.png" alt="" /></a></li>
+                        <li className="etc divide"><a href="/#"><img src="/images/mail.png" alt="" /></a></li>
+                        <li className="etc"><a href="https://www.facebook.com/naverd2"><img src="/images/facebook.png" alt="" /></a></li>
+                        <li className="etc"><a href="https://d2.naver.com/d2.atom"><img src="/images/atom.png" alt="" /></a></li>
                     </ul>
                 </div>
                 <div className="copy_right">Copyright © NAVER Corp. All Rights Reserved.</div>

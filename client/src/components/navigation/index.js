@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import 'css/App.css';
 
@@ -17,7 +17,7 @@ const Navigator = () => {
         <ul className="navi_ul">
           <li>
             <Link to="/">
-              <img src="/images/top_logo.png" className="main_logo" />
+              <img src="/images/top_logo.png" className="main_logo" alt=""/>
             </Link>
           </li>
           <li className="txt">

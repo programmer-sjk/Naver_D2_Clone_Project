@@ -9,7 +9,6 @@ export function paginate(items, pageNumber, pageSize) {
 
 const PostArticle = ({ articles, pageSize, currentPage }) => {
   const article = paginate(articles, currentPage, pageSize);
-  console.log(article);
   return (
     <>
       {article.map((item, idx) => (

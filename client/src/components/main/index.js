@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Slideshow from './slideshow';
 import Sidebar from './sidebar';
 
-import Contents from 'components/common/contents';
 import PostArticle from 'components/common/postarticle';
 import PaginateBox from 'components/common/paginatebox';
 import 'css/Main.css';

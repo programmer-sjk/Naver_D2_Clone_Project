@@ -37,7 +37,7 @@ const Slideshow = ({slideIdx, setSlideIdx}) => {
     return (
         <div className="main_banner_wrap">
             <div className="arrow main_banner_l_arrow" onClick={() => {setSlideShowImg(-1)}}></div>
-            <img src={slideImg} width="100%" />
+            <img src={slideImg} width="100%" alt="" />
             <div className="arrow main_banner_r_arrow" onClick={() => {setSlideShowImg(1)}}></div>
             <div className="banner_navi">
                 <button className="circle" onClick={() => {setSlideIdx(1)}}></button>

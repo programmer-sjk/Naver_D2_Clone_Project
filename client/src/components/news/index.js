@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Description from 'components/common/description';
-import Contents from 'components/common/contents';
 import PostArticle from 'components/common/postarticle';
 import PaginateBox from 'components/common/paginatebox';
 import 'css/News.css';

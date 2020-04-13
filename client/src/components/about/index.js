@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Description from 'components/common/description'
 import Schedule from './schedule.js'
 import History from './history.js'

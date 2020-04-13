@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import 'XEIcon/xeicon.min.css';
 
 const Contents = () => {
@@ -14,7 +14,7 @@ const Contents = () => {
                         <div className="view_count"> <i className="xi-eye"> </i> 1510</div>
                     </div>
                 </div>
-                <div className="pre_img"><img src="/images/banner1.png" width="170px" height="120px"/></div>
+                <div className="pre_img"><img src="/images/banner1.png" width="170px" height="120px" alt="" /></div>
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import 'css/Main.css';
 
 const Sidebar = () => {
@@ -47,11 +47,11 @@ const Sidebar = () => {
       <div>
         <h3>TOP KEYWORDS</h3>
         <div className="keywords_list">
-          <a href="#">JavaScript</a>
-          <a href="#">빅데이터</a>
-          <a href="#">분산처리</a>
-          <a href="#">Golang</a>
-          <a href="#">Scala</a>
+          <a href="/#">JavaScript</a>
+          <a href="/#">빅데이터</a>
+          <a href="/#">분산처리</a>
+          <a href="/#">Golang</a>
+          <a href="/#">Scala</a>
         </div>
       </div>
       <div className="input_mail">
