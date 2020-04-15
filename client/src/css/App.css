@@ -1,70 +1,147 @@
-
-
 .header_section {
-  max-width: 1200px;
-  min-width: 1200px;
-  margin:0 auto; 
+  /* max-width: 1200px;
+  min-width: 1200px; */
+  width: 100%;
+  margin: 0 auto;
   height: 66px;
-  font-family: Avenir,'Lato',"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔바른고딕",NanumBarunGothic,"나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
+  font-family: Avenir, 'Lato', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo',
+    '나눔바른고딕', NanumBarunGothic, '나눔고딕', NanumGothic, '맑은 고딕',
+    'Malgun Gothic', '돋움', dotum, AppleGothic, sans-serif;
+}
+
+.logo_section {
+  margin: 0 auto;
+  max-width: 1180px;
 }
 
 .main_logo {
-    width: 160px;
-    height: 48px;
-    padding-right: 20px;
-    float: left;
-    cursor: pointer;
+  width: 160px;
+  height: 48px;
+  padding-right: 20px;
+  float: left;
+  cursor: pointer;
 }
 
 .navi_ul {
-    list-style:none;
+  list-style: none;
 }
 
 .navi_ul li a {
-    padding: 0px 0px 10px 0px;
-    margin: 0px 10px;
-    border : 0;
-    float: left;
-    cursor: pointer;
-    color: #a0a0a0;
-    text-decoration: none;
-    line-height: 46px;
-    vertical-align: middle;
-    font-size: 16px;
-    height: 25px;
+  padding: 0px 0px 10px 0px;
+  margin: 0px 10px;
+  border: 0;
+  cursor: pointer;
+  color: #a0a0a0;
+  text-decoration: none;
+  vertical-align: middle;
+  font-size: 16px;
+  height: 25px;
 }
 
-.navi_ul li.txt a:hover{
-    color: #000;
+.navi_ul li.txt a:hover {
+  color: #000;
 }
 
-.navi_ul li.txt a:focus{
-    color: #000;
-    border-bottom: 2px solid #32cda0;
+.navi_ul li.txt a:focus {
+  color: #000;
+  border-bottom: 2px solid #32cda0;
 }
 
 .search_txt {
-    border: 1px solid #a0a0a0;
-    margin: 8px 0px 25px 150px;
-    width: 230px;
-    height: 32px;
-    vertical-align: middle;
-    float: left;
-    padding-left: 10px;
+  border: 1px solid #a0a0a0;
+  margin: 8px 0px 25px 150px;
+  width: 230px;
+  height: 32px;
+  vertical-align: middle;
+  float: left;
+  padding-left: 10px;
 }
 
 .searchBox {
-    height:36px;
-    max-height:36px;
-    float: left;
-    margin-top: 8px;
+  height: 36px;
+  max-height: 36px;
+  float: left;
+  margin-top: 8px;
 }
 
 .searchBtn {
-    height:36px;
-    background: url( "/images/top_search.png" ) no-repeat center;
-    width: 36px;
-    border: none;
-    border-left: 1px solid #E7E7E7;
-    margin-left: 20px;
+  height: 36px;
+  background: url('/images/top_search.png') no-repeat center;
+  width: 36px;
+  border: none;
+  border-left: 1px solid #e7e7e7;
+  margin-left: 20px;
+}
+
+@media (min-width: 961px) {
+  .navi_ul li a {
+    float: left;
+    line-height: 46px;
+  }
+}
+@media (max-width: 960px) {
+  .logo_section {
+    width: 150px;
+    margin: 0 auto;
+  }
+  /* .navi_ul > li.txt {
+    display: none;
+  } */
+  .search_input {
+    display: none;
+  }
+  .btn_lnb_menu {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    width: 21px;
+    height: 16px;
+
+    z-index: 10;
+    cursor: pointer;
+  }
+  .btn_lnb_menu.close {
+    background: url('/images/menu.png') no-repeat;
+    background-size: 21px 16px;
+  }
+  .btn_lnb_menu.open {
+    background: url('/images/close.png') no-repeat;
+    background-size: 21px 16px;
+  }
+  .ul_list {
+    top: 50px;
+    width: 100%;
+    position: absolute;
+    height: 172px;
+    z-index: 1000;
+    text-align: center;
+    background: white;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+  }
+  .ul_list.close {
+    display: none;
+  }
+  .ul_list.open {
+    display: block;
+  }
+  .navi_ul {
+    padding: 12px 0;
+  }
+  .navi_ul > li {
+    float: none;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+    line-height: 29px;
+  }
+  .navi_ul > a {
+    float: none;
+  }
+}
+
+@media (max-width: 1179px) {
+  .search_txt {
+    width: 120px;
+  }
 }

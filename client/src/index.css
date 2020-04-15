@@ -56,48 +56,51 @@ code {
 }
 
 .description {
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    line-height: 150px;
-    vertical-align: middle;
-    height: 150px;
-  }
-  
-  .description p 
-  {
-    height: 150px;
-    text-align: center;
-    margin: 1px;
-  }
-  
-  .description .title {
-    font-size: 26px;
-  }
-  
-  .description .divide {
-    margin: 0 20px;
-    font-size: 20px;
-    border-left: 1px solid white;
-    opacity: 0.2;
-  }
-  
-  .description .desc {
-    font-size: 17px;
-  }
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 150px;
+  vertical-align: middle;
+  height: 150px;
+}
 
-  .scroll_top {
-    position: fixed;
-    right: 380px;
-    bottom: 20px;
-    color: #a5a5a5;
-    cursor: pointer;
-  }
+.description p {
+  height: 150px;
+  text-align: center;
+  margin: 1px;
+}
 
-  .scroll_top:hover {
-    color: black;
-  }
+.description .title {
+  font-size: 26px;
+}
 
-  .clear {
-    clear: both;
-  }
+.description .divide {
+  margin: 0 20px;
+  font-size: 20px;
+  border-left: 1px solid white;
+  opacity: 0.2;
+}
+
+.description .desc {
+  font-size: 17px;
+}
+
+.scroll_top {
+  position: fixed;
+  right: 380px;
+  bottom: 20px;
+  color: #a5a5a5;
+  cursor: pointer;
+}
+
+.scroll_top:hover {
+  color: black;
+}
+
+.clear {
+  clear: both;
+}
+
+#root {
+  overflow: hidden;
+}
