@@ -16,14 +16,14 @@ const Navigator = () => {
     setCss(!css);
   };
   return (
-    <div>
+    <header>
       <div className="header_section">
         <div className="logo_section">
           <Link to="/">
             <img src="/images/top_logo.png" className="main_logo" alt="" />
           </Link>
         </div>
-        <div className="navi">
+        <nav>
           <div
             className={`btn_lnb_menu ${css ? 'open' : 'close'}`}
             onClick={onChangeCss}
@@ -48,7 +48,7 @@ const Navigator = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </nav>
         <SearchBtn></SearchBtn>
       </div>
       <div className="clear"></div>
@@ -60,7 +60,7 @@ const Navigator = () => {
         <Route path="/about" component={About} />
         <Route path="/search" component={Search} />
       </div>
-    </div>
+    </header>
   );
 };
 

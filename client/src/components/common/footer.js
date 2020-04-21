@@ -51,7 +51,7 @@ const Footer = ({history}) => {
     }
 
     return (
-        <div className="footer_wrap" style={isScroll?  {position: 'fixed', bottom: '0px'} : {}}>
+        <footer style={isScroll?  {position: 'fixed', bottom: '0px'} : {}}>
             <div className="scroll_top" onClick={scrollToTop} style={scrollActive? (scrollBottomFlag? { position: 'absolute', bottom: '160px'} : {position: 'fixed', bottom: '20px'}) : {display: 'none'}}>
                 <i className="xi-caret-up-circle-o xi-2x"></i>
             </div>
@@ -70,7 +70,7 @@ const Footer = ({history}) => {
                 </div>
                 <div className="copy_right">Copyright © NAVER Corp. All Rights Reserved.</div>
             </div>
-        </div>
+        </footer>
     )
 }
 
