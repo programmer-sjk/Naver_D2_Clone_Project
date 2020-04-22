@@ -1,11 +1,22 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Description from 'components/common/description'
 import Schedule from './schedule.js'
 import History from './history.js'
+import { abouts } from 'services/axios'
 
 import 'css/About.css';
 
 const About = () => {
+
+    useEffect(() => {
+        async function getSearchResult () {
+            const data = await abouts();
+            console.log(data)
+        }
+
+        getSearchResult()
+    })
+
     const bgColor ='#0090d7';
     const title = 'About D2';
     const desc = 'D2가 개발자들과 함께 걸어온 길을 소개합니다.';
