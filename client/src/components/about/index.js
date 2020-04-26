@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import Description from 'components/common/description'
 import Schedule from './schedule.js'
 import History from './history.js'
@@ -8,18 +8,24 @@ import 'css/About.css';
 
 const About = () => {
 
+    //const [histories, setHistories] = useState([]);
+    const [schedules, setSchedules] = useState([]);
+
     useEffect(() => {
         async function getSearchResult () {
             const data = await abouts();
-            console.log(data)
+            console.log('----')
+            //setHistories(data.historyList)
+            setSchedules(data.scheduleList)
         }
 
         getSearchResult()
-    })
+    }, [schedules])
 
     const bgColor ='#0090d7';
     const title = 'About D2';
     const desc = 'D2가 개발자들과 함께 걸어온 길을 소개합니다.';
+    /*
     const datas = [
         {
             image: '/images/schedule1.png',
@@ -43,7 +49,7 @@ const About = () => {
             link: 'https://deview.kr/2019'
         }
     ]
-    
+    */
     const histories = [
         {
             year: '2019',
@@ -73,7 +79,6 @@ const About = () => {
             ]
         },
     ]
-
     const moveHistory = () => {
         window.scrollTo({top: 887, behavior:'smooth'})
     }
@@ -88,8 +93,8 @@ const About = () => {
                         <button className="btn_history" onClick={moveHistory}>D2 히스토리 바로가기</button>
                     </div>
                     <div className="schedule_list">
-                        {datas.map((data, idx) => 
-                            <Schedule data={data} key={idx}></Schedule>
+                        {schedules.map((schedule, idx) => 
+                            <Schedule schedule={schedule} key={idx}></Schedule>
                         )}
                     </div>
                 </div>

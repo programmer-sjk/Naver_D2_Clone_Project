@@ -15,6 +15,7 @@ export const abouts  = async () => {
     try {
         const ret = await axios.get('http://localhost:8080/about') // 후에 keyword 추가
         console.log(ret)
+        return ret.data
     } catch(err) {
         console.log(err)
     }
