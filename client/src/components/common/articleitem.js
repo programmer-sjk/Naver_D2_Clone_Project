@@ -2,20 +2,27 @@ import React from 'react';
 import 'css/Main.css';
 
 const ArticleItem = ({ article }) => {
-  const { title, url, urlToImg, description, createDate, count } = article;
+  const {
+    postTitle,
+    url,
+    postImage,
+    postHtml,
+    postPublishedAt,
+    viewCount,
+  } = article;
   return (
     <div className="post_article">
       <div className="cont_post">
         <h2>
-          <a href={url}>{title}</a>
+          <a href={url}>{postTitle}</a>
         </h2>
         <div className="cont_img">
           <a href={url}>
-            <img src={urlToImg} width="100%" height="100%" alt="" />
+            <img src={postImage} width="100%" height="100%" alt="" />
           </a>
         </div>
         <a href={url} className="post_txt_wrap">
-          <div className="post_txt">{description}</div>
+          <div className="post_txt">{postHtml}</div>
         </a>
         <dl>
           <dt>
@@ -23,7 +30,7 @@ const ArticleItem = ({ article }) => {
               <span className="blind">등록일</span>
             </i>
           </dt>
-          <dd>{createDate}</dd>
+          <dd>{postPublishedAt}</dd>
           <dt>
             <span className="blind">|</span>
           </dt>
@@ -35,7 +42,7 @@ const ArticleItem = ({ article }) => {
               <span className="blind">카운트</span>
             </i>
           </dt>
-          <dd>{count}</dd>
+          <dd>{viewCount}</dd>
         </dl>
       </div>
     </div>
