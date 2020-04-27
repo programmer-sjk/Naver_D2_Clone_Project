@@ -8,19 +8,20 @@ import 'css/About.css';
 
 const About = () => {
 
-    //const [histories, setHistories] = useState([]);
+    const [histories, setHistories] = useState([]);
     const [schedules, setSchedules] = useState([]);
 
     useEffect(() => {
         async function getSearchResult () {
             const data = await abouts();
-            console.log('----')
-            //setHistories(data.historyList)
+            console.log(data.scheduleList)
+            console.log(data.historyList)
+            setHistories(data.historyList)
             setSchedules(data.scheduleList)
         }
 
         getSearchResult()
-    }, [schedules])
+    }, [])
 
     const bgColor ='#0090d7';
     const title = 'About D2';
@@ -49,7 +50,7 @@ const About = () => {
             link: 'https://deview.kr/2019'
         }
     ]
-    */
+    
     const histories = [
         {
             year: '2019',
@@ -79,6 +80,7 @@ const About = () => {
             ]
         },
     ]
+    */
     const moveHistory = () => {
         window.scrollTo({top: 887, behavior:'smooth'})
     }
@@ -94,7 +96,7 @@ const About = () => {
                     </div>
                     <div className="schedule_list">
                         {schedules.map((schedule, idx) => 
-                            <Schedule schedule={schedule} key={idx}></Schedule>
+                            <Schedule schedule={schedule} key={schedule.id}></Schedule>
                         )}
                     </div>
                 </div>

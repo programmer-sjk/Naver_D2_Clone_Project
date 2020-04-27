@@ -6,7 +6,6 @@ const Slideshow = ({slideIdx, setSlideIdx}) => {
     let timer;
 
     const [slideImg, setSlideImg] = useState(`/images/banner1.png`);
-    console.log('sildeshow')
     useEffect(() => {
         setSlideImg(`/images/banner${slideIdx}.png`)
         

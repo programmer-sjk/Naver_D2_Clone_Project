@@ -50,6 +50,10 @@
     border-radius: 17.5px;
 }
 
+.content .detail a{
+    color: #00c374;
+}
+
 .content .detail a:hover {
     color: inherit;
 }

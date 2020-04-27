@@ -2,6 +2,9 @@ import React from 'react';
 
 
 const Schedule = ({schedule}) => {
+    
+    const splitEnter = (data) => data.split('\n');
+    
     return (
         <div className="schedule">
             <div>
@@ -12,7 +15,9 @@ const Schedule = ({schedule}) => {
                 </div>
             </div>
             <div className="date_info">
-                {schedule.date}
+                {splitEnter(schedule.schedule).map((v, idx) => 
+                    <div key={idx}>{v}</div>
+                )}
                 <a href={schedule.url}>바로가기</a>
             </div>
         </div>
