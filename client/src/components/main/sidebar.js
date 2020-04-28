@@ -31,7 +31,7 @@ const Sidebar = () => {
             <li key={idx}>
               <a href={item.url}>
                 <span className="list_num">{item.rank + 1}</span>
-                <span>{item.keyword}</span>
+                <span>{item.postTitle}</span>
               </a>
             </li>
           ))}
