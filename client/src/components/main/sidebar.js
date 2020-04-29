@@ -15,7 +15,7 @@ const Sidebar = () => {
     };
     fetchTop();
     const fetchKeyword = async () => {
-      const response = await getAxios('/keyworld');
+      const response = await getAxios('/keyword');
       console.log(response);
       setKeyword(response.data);
     };
