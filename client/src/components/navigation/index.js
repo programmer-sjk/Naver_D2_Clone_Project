@@ -35,7 +35,7 @@ const Navigator = () => {
           <div className={`ul_list ${css ? 'open' : 'close'}`}>
             <ul className="navi_ul">
               <li className="txt">
-                <Link to="/hello">Hello world</Link>
+                <Link to="/helloworld">Hello world</Link>
               </li>
               <li className="txt">
                 <Link to="/news">D2 News</Link>
@@ -54,7 +54,7 @@ const Navigator = () => {
       <div className="clear"></div>
       <div>
         <Route path="/" component={Main} exact={true} />
-        <Route path="/hello" component={Hello} />
+        <Route path="/helloworld" component={Hello} />
         <Route path="/news" component={News} />
         <Route path="/program" component={Program} />
         <Route path="/about" component={About} />
