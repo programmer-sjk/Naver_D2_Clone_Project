@@ -1,11 +1,18 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { getAxios } from 'services/axios'
 
 const SearchBtn = ({ history }) => {
   let param = null;
 
-  const search = () => {
-    history.push('/search?keyword=' + param);
+  const search = async () => {
+    const data = await getAxios('/search?keyword=' + param);
+    
+    history.push({
+      pathname: '/search',
+      search: '?keyword=' + param,
+      state: { result: data.data }
+    });
   };
 
   return (
