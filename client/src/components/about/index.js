@@ -11,86 +11,40 @@ const About = () => {
     const [histories, setHistories] = useState([]);
     const [schedules, setSchedules] = useState([]);
 
-    const aggregateYear = data => {
-        //console.log(data)
+    const aggregateYear = datas => {
+        let rets = [];
+        datas.forEach(data => {
+            const year = data.date.substring(0, 4);
+            const ret = rets.find(ret => ret.year == year);
+            if(ret) {
+                ret.info = [...ret.info, data];
+            } else {
+                rets = [...rets, {year: year, info: [data]}]
+            }
+        })
+
+        return rets;
     }
 
     useEffect(() => {
-        async function getSearchResult () {
+        (async function getSearchResult () {
             const data = await getAxios('/about');
-            const histories = data.data.historyList;
             const schedules = data.data.scheduleList; 
             console.log(data)
-            console.log(histories)
-            console.log(schedules)
 
-            histories.forEach( history => aggregateYear(history))
+            const histories = aggregateYear(data.data.historyList)
 
             setHistories(histories)
             setSchedules(schedules)
-        }
+        })();
 
-        getSearchResult()
+        //getSearchResult()
     }, [])
 
     const bgColor ='#0090d7';
     const title = 'About D2';
     const desc = 'D2가 개발자들과 함께 걸어온 길을 소개합니다.';
-    /*
-    const datas = [
-        {
-            image: '/images/schedule1.png',
-            title: 'NAVER CAMPUS HACKDAY',
-            text: "NAVER 개발자와 함께하는 24시간의 해커톤",
-            date: ['20년 3월 18일 ~ 4월 2일 접수', '20년 5월 21일 ~ 5월 22일 핵데이'],
-            link: 'https://recruit.navercorp.com/naver/job/detail/developer?annoId=20003868&classId=&jobId=&entTypeCd=004&searchTxt=&searchSysComCd='
-        },
-        {
-            image: '/images/schedule2.png',
-            title: 'NAVER TECH CONCERT',
-            text: "Mobile 개발을 주제로 기술 컨퍼런스 진행",
-            date: ['20년 7월 예정'],
-            link: 'https://techcon.naver.com/'
-        },
-        {
-            image: '/images/schedule3.png',
-            title: 'DEVIEW',
-            text: "네이버 개발자 컨퍼런스",
-            date: ['20년 9월 예정'],
-            link: 'https://deview.kr/2019'
-        }
-    ]
-    
-    const histories = [
-        {
-            year: '2019',
-            info: [
-                {title: 'NAVER TECH CONCERT', detail: ['2019.4.11', 'FRONT END 개발 주제']},
-                {title: 'NAVER CAMPUS HACKDAY', detail: ['2019.5.16~17', 'SUMMER HACKDAY 진행']}
-            ]
-        },
-        {
-            year: '2018',
-            info: [
-                {title: 'NAVER TECH CONCERT :ANDROID', detail: ['2018.11.1~2', '주제별 기술 공유 세미나', '안드로이드 개발을 주제로 진행']},
-                {title: 'DEVIEW 2018', detail: ['2018.10.11~12', 'AI, 딥러닝, 빅데이터, 검색, AR, 블록체인 주제 강의', 'xDM platform 공개']}
-            ]
-        },
-        {
-            year: '2017',
-            info: [
-                {title: 'DEVIEW 2017', detail: ['2017.10.16~17', '네이버랩스 유럽, AI/머신러닝 기술적용 사례 다수 발표', '로봇 라인업 9종 공개']},
-            ]
-        },
-        {
-            year: '2016',
-            info: [
-                {title: 'DEVIEW 2016', detail: ['2019.4.11', 'FRONT END 개발 주제']},
-                {title: 'D2 CAMPUS HACKDAY', detail: ['2016.5', '네이버 개발자들과 함께하는 1박 2일 해커톤 시작']}
-            ]
-        },
-    ]
-    */
+   
     const moveHistory = () => {
         window.scrollTo({top: 887, behavior:'smooth'})
     }

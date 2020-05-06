@@ -28,14 +28,14 @@ const Sidebar = () => {
       <h3>TOP 5</h3>
       <div className="side_list">
         <ul>
-          {/*top5.map((item, idx) => (
+          {top5.map((item, idx) => (
             <li key={idx}>
               <a href={item.url}>
                 <span className="list_num">{item.rank + 1}</span>
                 <span>{item.postTitle}</span>
               </a>
             </li>
-          ))*/}
+          ))}
         </ul>
       </div>
       <div>
