@@ -1,20 +1,23 @@
 import React, {useState, useEffect} from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, useLocation } from 'react-router-dom';
 
 const Footer = ({history}) => {
     const SCROLL_UP_BUTTON_APPEAR_POS = 200;
     const [scrollActive, setScrollActive] = useState(false);
     const [scrollBottomFlag, setScrollBottomFlag] = useState(false);
     const [isScroll, setIsScroll] = useState(false);
-    
-    useEffect(() => {
-        history.listen(() => {            
-            setTimeout(() => {
-                setFooterBottom()
-            }, 1)
-        });
+    const delay = useLocation().pathname === '/about'? 50 : 1;
 
-        setFooterBottom();
+    history.listen(() => {            
+        setTimeout(() => {
+            setFooterBottom()
+        }, delay)
+    });
+
+    useEffect(() => {
+        setTimeout(() => {
+            setFooterBottom()
+        }, delay)
         window.addEventListener('scroll', onScroll);
     }, [])
     
