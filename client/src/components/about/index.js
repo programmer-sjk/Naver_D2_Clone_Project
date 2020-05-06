@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Description from 'components/common/description'
 import Schedule from './schedule.js'
 import History from './history.js'
-import { abouts } from 'services/axios'
+import { getAxios } from 'services/axios'
 
 import 'css/About.css';
 
@@ -11,13 +11,23 @@ const About = () => {
     const [histories, setHistories] = useState([]);
     const [schedules, setSchedules] = useState([]);
 
+    const aggregateYear = data => {
+        //console.log(data)
+    }
+
     useEffect(() => {
         async function getSearchResult () {
-            const data = await abouts();
-            console.log(data.scheduleList)
-            console.log(data.historyList)
-            setHistories(data.historyList)
-            setSchedules(data.scheduleList)
+            const data = await getAxios('/about');
+            const histories = data.data.historyList;
+            const schedules = data.data.scheduleList; 
+            console.log(data)
+            console.log(histories)
+            console.log(schedules)
+
+            histories.forEach( history => aggregateYear(history))
+
+            setHistories(histories)
+            setSchedules(schedules)
         }
 
         getSearchResult()
