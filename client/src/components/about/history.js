@@ -2,8 +2,8 @@ import React from 'react';
 
 
 const History = ({history}) => {
-
-    const splitEnter = (data) => data.split('\n');
+    console.log(history)
+    const splitEnter = (data) => data && data.split('\n') || [];
 
     return (
         <div>
@@ -14,6 +14,9 @@ const History = ({history}) => {
                         <li key={idx}>
                             <span className="dot"></span>
                             <strong className="year_title">{info.title}</strong>
+                            <dl>
+                                {info.date}
+                            </dl>
                             <dl>
                                 {splitEnter(info.comment).map( (v, idx) => 
                                     <div key={idx}>

@@ -6,7 +6,7 @@ const Footer = ({history}) => {
     const [scrollActive, setScrollActive] = useState(false);
     const [scrollBottomFlag, setScrollBottomFlag] = useState(false);
     const [isScroll, setIsScroll] = useState(false);
-    const delay = useLocation().pathname === '/about'? 50 : 1;
+    const delay = useLocation().pathname === '/about'? 80 : 1;
 
     history.listen(() => {            
         setTimeout(() => {
