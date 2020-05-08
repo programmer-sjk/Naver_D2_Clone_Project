@@ -11,7 +11,7 @@ const PaginateBox = (props) => {
       <div className="paginate">
         {pages.map((page, idx) => (
           <a
-            href="/#" // href="/home?page={page}"
+            href="#"
             key={idx}
             className={page === currentPage ? 'btn_num select' : 'btn_num'}
             style={{ cursor: 'pointer' }}
