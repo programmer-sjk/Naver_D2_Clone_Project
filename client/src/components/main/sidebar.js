@@ -10,15 +10,17 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchTop = async () => {
       const response = await getAxios('/top5');
-      if(response) 
+      if (response) {
         setTop5(response.data);
+      }
     };
     fetchTop();
     const fetchKeyword = async () => {
       const response = await getAxios('/keyword');
       console.log(response);
-      if(response)
+      if (response) {
         setKeyword(response.data);
+      }
     };
     fetchKeyword();
   }, []);
@@ -30,7 +32,7 @@ const Sidebar = () => {
         <ul>
           {top5.map((item, idx) => (
             <li key={idx}>
-              <a href={item.url}>
+              <a href={`https://d2.naver.com${item.url}`}>
                 <span className="list_num">{item.rank + 1}</span>
                 <span>{item.postTitle}</span>
               </a>
