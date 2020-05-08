@@ -10,8 +10,8 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchTop = async () => {
       const response = await getAxios('/top5');
-      console.log(response);
-      setTop5(response.data);
+      if(response) 
+        setTop5(response.data);
     };
     fetchTop();
     const fetchKeyword = async () => {

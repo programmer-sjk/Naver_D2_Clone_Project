@@ -29,16 +29,15 @@ const About = () => {
     useEffect(() => {
         (async function getSearchResult () {
             const data = await getAxios('/about');
-            const schedules = data.data.scheduleList; 
-            console.log(data)
+            if(Object.keys(data.data).length > 0) {
+                console.log(data.data.historyList)
+                const schedules = data.data.scheduleList; 
+                const histories = aggregateYear(data.data.historyList)
 
-            const histories = aggregateYear(data.data.historyList)
-
-            setHistories(histories)
-            setSchedules(schedules)
+                setHistories(histories)
+                setSchedules(schedules)
+            }
         })();
-
-        //getSearchResult()
     }, [])
 
     const bgColor ='#0090d7';
