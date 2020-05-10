@@ -44,7 +44,7 @@ const Sidebar = ({history}) => {
         <ul>
           {top5.map((item, idx) => (
             <li key={idx}>
-              <a href={`https://d2.naver.com${item.url}`}>
+              <a href={item.url}>
                 <span className="list_num">{item.rank + 1}</span>
                 <span>{item.postTitle}</span>
               </a>
