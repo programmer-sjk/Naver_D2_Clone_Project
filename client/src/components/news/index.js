@@ -35,7 +35,7 @@ const News = () => {
   return (
     <div>
       <Description bgColor={bgColor} title={title} desc={desc}></Description>
-      <div id="container pc">
+      <div id="container">
         <div className="con_area">
           <div className="contents news">
             <PostArticle
