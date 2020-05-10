@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { getAxios } from 'services/axios';
+import { withRouter } from 'react-router-dom';
 
 import 'css/Main.css';
 
-const Sidebar = () => {
+const Sidebar = ({history}) => {
   const [top5, setTop5] = useState([]);
   const [keyword, setKeyword] = useState([]);
 
@@ -25,6 +26,17 @@ const Sidebar = () => {
     fetchKeyword();
   }, []);
 
+  const search = async (param) => {
+    console.log(param)
+    const data = await getAxios('/search?keyword=' + param);
+    
+    history.push({
+      pathname: '/search',
+      search: '?keyword=' + param,
+      state: { result: data.data }
+    });
+  };
+
   return (
     <div className="sidebar">
       <h3>TOP 5</h3>
@@ -44,7 +56,7 @@ const Sidebar = () => {
         <h3>TOP KEYWORDS</h3>
         <div className="keywords_list">
           {keyword.map((item, idx) => (
-            <a href={item.url} key={idx}>
+            <a key={idx} onClick={() => search(item.keyword)}>
               {item.keyword}
             </a>
           ))}
@@ -73,4 +85,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default withRouter(Sidebar);
